@@ -190,7 +190,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello Shome Shoes!')
+    res.send('Hello Shome Cars!')
 })
 
 app.listen(port, () => {
