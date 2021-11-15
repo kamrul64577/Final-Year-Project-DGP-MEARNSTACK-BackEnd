@@ -181,12 +181,12 @@ async function run() {
             res.json(result);
         })
 
-        app.put('/orders/approved', async (req, res) => {
+        // app.put('/orders/approved', async (req, res) => {
             
-            const updateDoc = { $set: { status: 'Approved' } }
-            const result = await ordersCollection.updateOne(updateDoc);
-            res.json(result);
-        })
+        //     const updateDoc = { $set: { status: 'Approved' } }
+        //     const result = await ordersCollection.updateOne(updateDoc);
+        //     res.json(result);
+        // })
     }
     finally {
         // await client.close();
