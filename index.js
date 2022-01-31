@@ -114,7 +114,7 @@ async function run() {
                     val_id: req.body.val_id
                 }
             })
-            res.redirect(`http://localhost:3000/success/${req.body.tran_id}`)
+            res.redirect(`${port}/success/${req.body.tran_id}`)
         })
         app.post('/fail', async (req, res) => {
             const result = await orderCollection.deleteOne({ tran_id: req.body.tran_id })
