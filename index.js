@@ -114,15 +114,15 @@ async function run() {
                     val_id: req.body.val_id
                 }
             })
-            res.redirect(`${port}/success/${req.body.tran_id}`)
+            res.redirect(`https://dgp-final-project.web.app/success/${req.body.tran_id}`)
         })
         app.post('/fail', async (req, res) => {
             const result = await orderCollection.deleteOne({ tran_id: req.body.tran_id })
-            res.status(400).redirect('http://localhost:3000/')
+            res.status(400).redirect('https://dgp-final-project.web.app/')
         })
         app.post('/cancel', async (req, res) => {
             const result = await orderCollection.deleteOne({ tran_id: req.body.tran_id })
-            res.status(200).redirect('http://localhost:3000/')
+            res.status(200).redirect('https://dgp-final-project.web.app/')
         })
 
         app.post('/validate', async (req, res) => {
