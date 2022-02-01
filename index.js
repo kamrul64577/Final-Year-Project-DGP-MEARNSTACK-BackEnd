@@ -54,7 +54,7 @@ async function run() {
                 total_amount: req.body.total_amount,
                 currency: 'BDT',
                 tran_id: uuidv4(),
-                success_url: 'http://localhost:5000/success',
+                success_url: `${port}/success`,
                 fail_url: 'http://localhost:5000/fail',
                 cancel_url: 'http://localhost:5000/cancel',
                 ipn_url: 'http://localhost:5000/ipn',
